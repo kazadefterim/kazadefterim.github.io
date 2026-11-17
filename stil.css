@@ -1,0 +1,61 @@
+/* Kaza Defterim — destek ve gizlilik sayfaları. Renkler uygulamanın jetonları. */
+:root {
+  --zemin: #F6F8F6;
+  --yuzey: #FFFFFF;
+  --kenar: #DDE7E0;
+  --metin: #13241B;
+  --metin2: #55665C;
+  --birincil: #0E7146;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zemin: #0E1512;
+    --yuzey: #16201B;
+    --kenar: #2B3A32;
+    --metin: #EAF2EC;
+    --metin2: #A7B8AD;
+    --birincil: #4CC38A;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--zemin);
+  color: var(--metin);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 32px 16px 48px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+header img { width: 56px; height: 56px; border-radius: 13px; }
+header .ad { font-weight: 700; font-size: 20px; line-height: 1.2; }
+header .alt { color: var(--metin2); font-size: 15px; }
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 6px; }
+h2 { font-size: 19px; margin: 32px 0 8px; }
+p, li { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+.tarih { color: var(--metin2); font-size: 15px; margin-bottom: 24px; }
+.kart {
+  background: var(--yuzey);
+  border: 1px solid var(--kenar);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin: 20px 0;
+}
+.kart p:last-child { margin-bottom: 0; }
+a { color: var(--birincil); }
+.dugme {
+  display: inline-block;
+  background: var(--birincil);
+  color: var(--zemin);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+details { border-top: 1px solid var(--kenar); padding: 12px 0; }
+details:last-of-type { border-bottom: 1px solid var(--kenar); }
+summary { cursor: pointer; font-weight: 600; }
+details p { margin-top: 10px; }
+footer { margin-top: 40px; color: var(--metin2); font-size: 15px; }
+footer a { color: inherit; }
